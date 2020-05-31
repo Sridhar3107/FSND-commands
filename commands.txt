@@ -1,0 +1,896 @@
+$ cd AppData\Local\Programs\Python\Python37
+
+https://leetcode.com/
+what is framework
+https://docs.sqlalchemy.org/en/13/orm/query.html
+
+https://interviewing.io/signup
+
+C:\Program Files\PostgreSQL\12
+
+C:\Program Files\PostgreSQL\12\bin
+'postgres://postgres:1234@localhost:5432/fyuurdb
+
+renga-Fyyur
+user@user-PC MINGW64 ~/Desktop
+$ cd Desktop/'Full stack developer'/Project-1_Fyyur/Fyuur_master_Renga
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-1_Fyyur/Fyuur_master_Renga
+$ FLASK_APP=app.py FLASK_DEBUG=true flask run
+
+
+
+important commands
+
+$ FLASK_APP=app.py FLASK_DEBUG=true flask run
+
+
+$ python -i
+
+$ psql -U postgres -h localhost
+
+curl http://127.0.0.1:5000/books/5 -X PATCH -H "Content-Type: application/json" -d '{"rating" : "3"}'
+
+
+curl -X PATCH http://127.0.0.1:5000/books/5  -H "Content-Type: application/json" -d '{"rating" : "2"}'
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"title": "Harry potter-chamber of secret", "rating" : "2", "author" : "J.K Rowling"}' http://127.0.0.1:5000/books
+
+curl -X DELETE http://127.0.0.1:5000/books/5
+
+
+postgres=# \c mydb
+You are now connected to database "mydb" as user "postgres".
+mydb=# \dt
+
+user@user-PC MINGW64 ~/Desktop/Full Stack Developer
+$ export FLASK_APP=migrate.py
+
+user@user-PC MINGW64 ~/Desktop/Full Stack Developer
+$ flask db init
+
+
+mydb=# insert into person values(1,'RENGA');
+INSERT 0 1
+
+
+mydb=# \dt
+          List of relations
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | student  | table | postgres
+ public | student1 | table | postgres
+ public | todos    | table | postgres
+(3 rows)
+
+
+postgres-# \dt
+          List of relations
+ Schema |  Name   | Type  |  Owner
+--------+---------+-------+----------
+ public | student | table | postgres
+ public | todos   | table | postgres
+
+postgres=# drop database mydb;
+ERROR:  database "mydb" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+postgres=# drop database mydb;
+DROP DATABASE
+postgres=# \c mydb
+FATAL:  database "mydb" does not exist
+Previous connection kept
+postgres=# create database mydb;
+CREATE DATABASE
+postgres=#
+
+flask db migrate
+postgres=# \c mydb
+You are now connected to database "mydb" as user "postgres".
+mydb=# \dt
+              List of relations
+ Schema |      Name       | Type  |  Owner
+--------+-----------------+-------+----------
+ public | alembic_version | table | postgres
+(1 row)
+
+
+flask db upgrade
+mydb=# \dt
+              List of relations
+ Schema |      Name       | Type  |  Owner
+--------+-----------------+-------+----------
+ public | alembic_version | table | postgres
+ public | todos           | table | postgres
+(2 rows)
+
+
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered and unindexed. No duplicate members.
+Dictionary is a collection which is unordered, changeable and indexed. No duplicate members.
+
+user@user-PC MINGW64 ~/DEsktop
+$ cd 'Desktop/Full stack developer'
+
+user@user-PC MINGW64 ~/DEsktop/Full stack developer
+$ FLASK_APP=hello-flask.py FLASK_DEBUG=true flask run
+
+Interactive
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\user>python
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit
+(AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hello_renga
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'hello_renga'
+>>> cd Desktop/Full stack developer
+  File "<stdin>", line 1
+    cd Desktop/Full stack developer
+             ^
+SyntaxError: invalid syntax
+>>> exit()
+'
+C:\Users\user> cd Desktop/Full stack developer
+
+C:\Users\user\Desktop\Full stack developer>python
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit
+(AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hello_renga
+>>> from hello_renga import Person
+>>> Person.query.all
+<bound method Query.all of <flask_sqlalchemy.BaseQuery object at 0x000000000229D
+688>>
+>>> Person.query.first
+<bound method Query.first of <flask_sqlalchemy.BaseQuery object at 0x0000000002D
+93108>>
+>>> Person.query.first()
+<Todo 1 RENGA>
+>>> Person.query.allt()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'BaseQuery' object has no attribute 'allt'
+>>> Person.query.all()
+[<Todo 1 RENGA>]
+>>>
+
+important command
+$ python -i
+
+abort in try block jumps to executes abort in except block
+ImportError: attempted relative import with no known parent package
+
+Desktop/Full stack developer/FSND-master/projects/02_trivia_api/starter/backend
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-2_Trivia/Trivia_Renga/backend
+$ cd trivia/Scripts
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-2_Trivia/Trivia_Renga/trivia/Scripts
+$ . activate
+(trivia)
+
+psql objectrocket -h 127.0.0.1 -d some_database -f test.sql
+psql \i <file path\filename.psql>
+
+
+/Desktop/Full stack developer/Project-2_Trivia/Trivia_Renga/backend/trivia.psql
+
+{"answer":"India","category":6,"difficulty":3,"id":10,"question":"Which team won ICC world cup in 1983?"}
+
+$ curl -X POST -H "Content-Type: application/json" -d '{"previous_questions": ["22","21","20"],"quiz_category": {"type": "Science", "id": "1"}}' http://127.0.0.1:5000/quizzes
+
+return renga -> just return doesn't execute
+return renga() ->  return  & execute
+
+https://fsndreng.auth0.com/authorize?audience=Image&response_type=token&client_id=EBpGnk8AcZ0cEG50ucMgfbxjGsWmh2tC&redirect_uri=https://localhost:5000/login-results
+
+Expired token:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJJbWFnZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4NjYyNTA5NywiZXhwIjoxNTg2NjMyMjk3LCJhenAiOiJFQnBHbms4QWNaMGNFRzUwdWNNZ2ZieGpHc1dtaDJ0QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwifQ.ci10XQUCmXE3bmRy3NJOIpBDLS2--K9o4BoJxA8poPC_iEiFgf4q5f7HrTFwarroTu26bcUH_k8g-Nit0V9L2Jwe81tiDTwQMbEDQBJ1FNCEeHSn4sRxc9e2XZXZB7eYFZRWIQEkMTHvv0G47BvJFS4FlG1TANPkY50o60Lc3_F3GXD3DU5NcpNVi4lvpT01RQvSdKSyGagHzUDK5v6tjnpbM21X0bBzy5HbBlaaqCjtd9sWOyYrgQSU8i__3sLjkATp1EqcSD1nm-ZyWKmHlxIGf-JcUuJi8XJLWA0TU1ITDZoYHaoLBzvPdfVqXSNZGpbPT0iSxvmLf5FpPiqwrw
+
+Token:
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJJbWFnZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4Njc0MTE1MSwiZXhwIjoxNTg2NzQ4MzUxLCJhenAiOiJFQnBHbms4QWNaMGNFRzUwdWNNZ2ZieGpHc1dtaDJ0QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwifQ.i3URG39dFQkKLwxnqXtZxOP5jDSozIh_f1GSe7c4x_spnV6vy9DZSniEWbcZgkHRsKyKNtcMVHSgliOU_0sg94jchE38mSZ-MaZHHK3JjtoXHVXvmQ1q8ONXwJLJB0gtwDKORED4sfn9pRX5i4Q85GR4q8uyBF6O7zInnfbavtXcUnSw9df-6ihfUbWw2ulB6NKJSjBOcP22OLDXBcJY-ighrg4gTsh45Am_EWCbLDPfxzRmyk5y5dLOMX1JMFAefUfpM9iZrq6ohhnKhXs-BedoxwTUT4ujsaVw3a8CnILSjhNENgKJ6uymFEqSieJ73dTb5Asl4nyd7fyYeys-qg
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJJbWFnZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4NzI2MDUwMiwiZXhwIjoxNTg3MjY3NzAyLCJhenAiOiJFQnBHbms4QWNaMGNFRzUwdWNNZ2ZieGpHc1dtaDJ0QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwifQ.mi6h5yUhYpw5cOOk9qLu_NGyxVyioFatY6qUGIzbH1S4l7SoyX-wFL4xTWmVmYZEAfWhAP4r8W-rU1pZgdw_Cwj1jFqNxKJ5zrlQJNUndQDLx24cdvl0VFSWIvXp9y1jsQqI5eEyd8ZYmcWKM0MjO-JBUFbg26m9XKmvHVYB3IJGtnvsab5oLud4sBgGnNThOlVrT51d4xSASPTK7MbZhdB_tHq9csnJ-DxrL7qBpyMmlWgfpjCzXRaHyIgVlOpTK2RQgLzzvMWCOsVrlQwha7uJ_qT-iu-PpqtzGt7ODrxGTtFnZf_MDUzFwr1WJiZF70J2c_wadFpoJL_dIqHmAA
+
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJJbWFnZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4NzI3MDgxOCwiZXhwIjoxNTg3Mjc4MDE4LCJhenAiOiJFQnBHbms4QWNaMGNFRzUwdWNNZ2ZieGpHc1dtaDJ0QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6aW1hZ2VzIiwicG9zdCBpbWFnZSJdfQ.c77Zsnz-2W0hjIDQ8Vdrrx8qWAzLqs7K9sa57HRhDj_JdDrXMrT8CZ0peYk57ou9cBikGq5kWcxmB7EPBXq_JS6cJHx1U0wQDLnrcPQ8r2Mn1JKu720BJgYg9Itfr5D2nKTrTaF1Py-UHthrDqhHRfyGLyS_sONcnEQIfmgZHmTXSnR8I4T8wmU_JuHRYwQNnzLzX6gsVMClGKck7uqbCWHIeuxnvVRN7T1wUq-96AFZkskhi6Qo4OL5U6LpTpvgC3vYGR2Jx9eVTxBC5xx3e6RvqDKtLe2DPturvC7hmGCmtBX1J8LCPiJMJSNPQ6HLuxg3J8E2AKP70L0tJtCvkA
+
+https://fsndrenga.auth0.com/authorize?audience=Coffee%20shop&response_type=token&client_id=lMPrwuxYZ2iAKN2SIXmUs437M4ZTqRTt&redirect_uri=http://127.0.0.1:8100/tabs/user-page
+FSNDRENGA
+sample Token1:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlMzg0OWZiMjQwYzhhMjRlMDMyIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMDE5NTYsImV4cCI6MTU4NzMwOTE1NiwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbXX0.ZdlLQuKhvKu4N2RNtToOA666YViw2JA5kdZsiCyTJ-ZJmgRbHK1adgGxcr0xjqjWLWiPZfIZELqps9X-2-YDZIKlFqvuM89tcO3nQViHh43K787Bp8ymEKJlYMhCFFmvgSHEuOoe0IhjhyUo7wnUFN4u3wwBb4PpO0K5DZM-lW6tlmkLuv1-NHAGY1wVzo0o7ZdS45VzFyJNDvMjQyof_u8ojt9VLrYY77_EUVaBst6gcHyANvBWvum-C6s6TLFPDNH7mLW0mesSyJ0FMZ23nd4jJosvTiAXqmvzW9iGt9AO2ZQgpP6vXGGzjCf-U1wwTJcOerRoEW7etarLr09fFw
+
+sample Token2:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlMzg0OWZiMjQwYzhhMjRlMDMyIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMDIxOTQsImV4cCI6MTU4NzMwOTM5NCwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbXX0.LOcM1dSIxH6g3v16C3-HQpxzJRAhPB11UkzFoBHFK2cVC4WImhlAIyDlywJ3FeuUOz2QatVRt-19j2gR3gWPFne2K8IFD71HXPH0W54kAvkLZJilO4WduDfl8tqiYzaI6TsAs5Zpmy5XqFXJSZ2uflPoy-_PjrTgalIl67ve1BayiP8a5z20l2Aw8PP7egJka1T99axUrrwrX1hbk8TO8w-4XizN3sJpMpjYGhYwGE9imN0qD86YCk8PJNFKDGXnBSD3fkZnFIYd300cG7lJWbDG0rxxmV8ebbCRY9sUO54GMg3HbO9mH_ISI5NNBeFoPWm4lsR074w_4t5-3vO1iA
+
+manager :
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlMzg0OWZiMjQwYzhhMjRlMDMyIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMDI1NzYsImV4cCI6MTU4NzMwOTc3NiwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.L8yCi2I7RqGFfYAMhgEcWMLZ969VxOYau-7iXsJeocpiGV-vYjPWr5I6sbPTR_tbDHlhtv8SQjR5DtMUGjPa_oOaC5_ZOX5JzjP-1i5bneMPFa7FwSQKbfO2ytqz5IcQVurTTbJzhZSdEBjGQRM9tAncpoua8poOwMGc2yRzmJCBEd005Ib02pqPi7JEPgviacX0YZ-utMNjpR7lwmGwsYwmql4pUSmYBsd_Xix9VM3QQsCO3c-L5OwqLICLiKiL-S5lhaEzeXXXVsqEqfZaq4dhAIAQhUH6WCVywY8vOdvax5OcFMRzeBRAua2HMe_zZO547SWQgEoPgSeKJMGXeg
+
+
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlMzg0OWZiMjQwYzhhMjRlMDMyIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMTQ4NzAsImV4cCI6MTU4NzMyMjA3MCwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.h_L_ARHvaD9m73zE-v4VT-QYF9r2XCKBFfqBUf5J8hQTWvNam3VmAqxeypIEi68sl-ZcB08YWOClKgYCd-YidXKcy5-vM0Uh_5r9hEH_88S8Bg7xg7StyAYF3KT5jMswfjlR-hYQLujmTdTdFevzncWgFRbT7crocvaapYQo8XR-luOBQZzLqcWhci172IKG3BLPqKZ63P7Xc3U03ZxByW5SRCkbRk1HFmd1Hsiy20ODNFazLd2QDQm9AEA6SEi_8dRxSUFpEbfOAXBpM0qV7TnrSeRPI4WXHhVmqAtYDeoKGoVmNn_DC29AQfv2w6jgL4UNIIbmdbNtp0b3azWyMA
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlMzg0OWZiMjQwYzhhMjRlMDMyIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMTQ5NTIsImV4cCI6MTU4NzMyMjE1MiwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.SjTjWQbN21KSgc7G_Wf7supp_8O68vXMIrJNezl68Pscojcnoh2OB5zyQdwJkrwnw638kIezKYVJ0nYw_J2gUPsq_dwIEIb5GCPSNWQMMp6gfLYK0ttT368vsL_a_4vpOr_2d2wD06lzTWSKp7kGdqrgqn0UWcN3s4lt9_Nbscl_BzhKrGq97E-TcarILFkRRegYdUTZ1xiQ_xjiNtcWdx4PZHK0vA-jfbO6Nwje2dgnFDvHvmL0gxmj8a-hyoQhKIzyqRr_vEYgRq_liyen8vmxtC7BNX2NI-TsFCZxwd8poWV9z6AUH6o61RA9LCUaInqMPGMeL7XPf0QlL5iiTg
+
+barista:
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5KVURuaS14dm5ieE1XTUJINDB0MCJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nYS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWU5YzRlYTNkZTQzMWEwYzhkNjY0ZGJmIiwiYXVkIjoiQ29mZmVlIHNob3AiLCJpYXQiOjE1ODczMjAzNDUsImV4cCI6MTU4NzMyNzU0NSwiYXpwIjoibE1Qcnd1eFlaMmlBS04yU0lYbVVzNDM3TTRaVHFSVHQiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpkcmlua3MtZGV0YWlsIl19.r4k6CEY8EZt-K5LaWkFueY3Fafp2LLQjPcvilHlVFdapZ4-CRAprKRDJBR5k2v_UkRGD4FoPUgBF4Z5ltOM6UGgqepZGHo8__OscHt00ZKkpXHUTW8WLC9MBGXB9PhV9b8zIajmQVwRkJ6OIJ4WFeelIXpTA2jU99CdcRzc_gX913yNszc148rim6tZpmpbm0bJYIYNpzl1gtSyJaQPIB0wzYLZjdonVf6Zy5BxqNhFaLpI6C1NZN1wbzck5VvKPytY1Ai9IgJT4HUfBTf1u_rcouClZkDlZcD_6ZAgF77YeHocnyX8hzaC0Lo80aK98qeb9aV6JOPxp3ufGJIp-Ww
+
+cd /Desktop/"Full stack developer"/Project-3_Coffee_shop/"Coffee shop_Renga"/backend/src
+
+
+cd /Desktop/Full stack developer/Project-3_Coffee_shop/Coffee shop_Renga/frontend
+
+C:\Users\user\Desktop\Full stack developer\Project-3_Coffee_shop\project03_coffee_shop_chk1\finished\frontend>ionic serve
+
+
+for attempt in random_strings:
+   user= { 'username' : 'target','password': attempt)
+   r = requests.post('{{host}}/login' data= user
+
+for attempt in nist_bad:
+    try_password(attempt)
+   user= { 'username' : 'target','password': attempt)
+   r = requests.post('{{host}}/login' data= user
+
+rainbow_table={}
+for word in list of common_words:
+	hashed_word=hash(word)
+	rainbow_table[hashed_word]=word
+
+with open('nist_10000.txt', newline='') as bad_passwords:
+    nist_bad = bad_passwords.read().split('\n')
+    
+rainbow_table = {}
+for word in nist_bad:
+    hashed_word = hashlib.md5(word.encode()).hexdigest()
+    rainbow_table[hashed_word] = word
+    
+# Use the Rainbow table to determine the plain text password
+for user in leaked_users_table.keys():
+    try:
+        print(user + ":\t" + rainbow_table[leaked_users_table[user]['md5']])
+    except KeyError:
+        print(user + ":\t" + '******* hash not found in rainbow table')
+
+
+
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJJbWFnZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4NzI3MDgxOCwiZXhwIjoxNTg3Mjc4MDE4LCJhenAiOiJFQnBHbms4QWNaMGNFRzUwdWNNZ2ZieGpHc1dtaDJ0QyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6aW1hZ2VzIiwicG9zdCBpbWFnZSJdfQ.c77Zsnz-2W0hjIDQ8Vdrrx8qWAzLqs7K9sa57HRhDj_JdDrXMrT8CZ0peYk57ou9cBikGq5kWcxmB7EPBXq_JS6cJHx1U0wQDLnrcPQ8r2Mn1JKu720BJgYg9Itfr5D2nKTrTaF1Py-UHthrDqhHRfyGLyS_sONcnEQIfmgZHmTXSnR8I4T8wmU_JuHRYwQNnzLzX6gsVMClGKck7uqbCWHIeuxnvVRN7T1wUq-96AFZkskhi6Qo4OL5U6LpTpvgC3vYGR2Jx9eVTxBC5xx3e6RvqDKtLe2DPturvC7hmGCmtBX1J8LCPiJMJSNPQ6HLuxg3J8E2AKP70L0tJtCvkA
+
+
+
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-3_Coffee_shop/Coffee shop_Renga/backend/src
+$ flask_app=api.py flask_env=development flask run
+ * Serving Flask app "api.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 164-918-607
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [19/Apr/2020 19:10:18] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01¦\x03\x034~_\x86?O,^:s\x03\x92\x01¦3e/\x7fv\x96¦\x13¦ID^\x8a\x83¦¦^\x00\x00')
+127.0.0.1 - - [19/Apr/2020 19:10:18] "¦4~_\x86?O,^:s\x92¦3e/v\x96¦¦ID^\x8a\x83¦¦^¦+¦/??¦,¦0¦¦/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:10:22] code 400, message Bad request version ('\x13\x01\x13\x03\x13\x02¦+¦/??¦,¦0¦\x13¦\x14\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 19:10:22] "¦\x85d\x86¦¦$¦jQ¦=\x9e¦\x94 ¦h\x81I¦\x85¦b¦¦L¦¦+¦/??¦,¦0¦¦/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:12:09] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01¦\x03\x03¦fq6\x7f¦m¦¦¦\x8b\x81¦%¦\x9c¦i&\x17m¦\x146T¦¦¦¦\x07mN')
+127.0.0.1 - - [19/Apr/2020 19:12:09] "¦¦fq6¦m¦¦¦\x8b\x81¦%¦\x9c¦i&m¦6T¦¦¦¦mN ?¦¦*¦¦¦[\x9c¦36¦¦{!¦¦\x9cw!:\x94\x9c9"¦¦??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:12:09] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01¦\x03\x03\x12G;¦_\x8e\x98Y?¦i\x1b\x0e¦¦¦/Ao¦UT¦%¦+]¦')
+127.0.0.1 - - [19/Apr/2020 19:12:09] "¦G;¦_\x8e\x98Y?¦i¦¦/Ao¦UT¦%¦+]¦ g¦Md¦\x8f)\x81\¦\x97¦-6¦sK¦?+\x93Lÿi¦r?"zz??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:12:11] code 400, message Bad request version ('¦¦n\x90¦L¦x¦OVK09\x819¦9¦\x928¦¦¦\x98\x16¦\x18¦\xad¦\x01\x00"¦¦\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 19:12:11] "¦P\x9ch¦C¦¦e|%u¦¦¦\x97¦¦¦%zVp¦?H ¦¦n\x90¦L¦x¦OVK09\x819¦9¦\x928¦¦¦\x98¦¦¦¦"¦¦??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:42:11] code 400, message Bad request version ('k\x990¦¦¦¦R\x19\x97+s\x9b¦\x00"\x9a\x9a\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 19:42:11] "¦|_jW¦¦¦\x953[Y¦¦yc¦\x86|q\x95d¦%\s¦coP[ ¦\x87¦k¦g¦       ¦6¦F Q  ¦k\x990¦¦¦¦R\x97+s\x9b¦"\x9a\x9a?¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 19:42:11] code 400, message Bad request version ('\x88G\x9a\x13\x8bG\'\x9f?\x04\x00"¦¦\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 19:42:11] "¦E¦N¦¦6¦.
+                                               ¦A¦¦¦K2¦¦¦¦¦¦¦mb¦ NS\x9a¦Uhdo\x81        ¦¦?EW\x8a¦\x8aS
+                                                                                                       \x88G\x9a\x8bG'\x9f?"¦¦??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 22:13:28] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01¦\x03\x03\x06\x05¦$`k\x13')
+127.0.0.1 - - [19/Apr/2020 22:13:28] "¦¦$`k-{" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 22:13:29] code 400, message Bad request version ('\x00"zz\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 22:13:29] "¦¦\x97DM=fj¦¦\x8a¦mi¦\x82¦>cN\x97¦¦%h¦./¦¦¦ 9C¦4¦¦¦¦\x87¦Y3¦ ¦dl¦¦¦\x95\x813\x88¦"zz??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [19/Apr/2020 22:13:44] code 400, message Bad request version ('\x14\x1a¦¦\x82q¦¦¦\x14}#\x07\x00"\x9a\x9a\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+¦¦\x82q¦¦¦}#"\x9a\x9a?¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -/\x86\x85J b¦u\x95\x84?¦¦\{\x81¦¦\x86¦
+127.0.0.1 - - [19/Apr/2020 22:13:44] code 400, message Bad request version ('¦=\x10k=¦\x01\x03g¦h¦\x00"¦¦\x13\x03\x13\x01\x13\x02??¦+¦/¦,¦0¦\x13¦\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+127.0.0.1 - - [19/Apr/2020 22:13:44] "¦¦\x8eGrm¦$\x9e`|¦¦/5¦sT?[¦¦b¦¦¦|%¦ \x82¦¦v¦\x90:¦¦\¦5¦¦¦\x9e¦¦=k=¦g¦h¦"¦¦??¦+¦/¦,¦0¦¦\x9c\x9d/5" HTTPStatus.BAD_REQUEST -
+
+
+Docker commands
+$ docker run --name demo -e POSTGRES_PASSWORD=password -d postgres
+
+$ docker container ls -a
+
+$ docker ps
+
+$ docker stop 0ea7a8d5cffd
+
+psql -h 0.0.0.0 -p 5432 -U postgres
+
+
+Desktop/"Full stack developer"\Project-4\hello_world
+
+Desktop/"Full stack developer"\Project-4\Deploy
+
+
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+i(insert)
+:wq!
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/hello_world
+
+~/Desktop/"Full stack developer"/Project-4/Develop
+$ docker build . --tag test:latest
+
+
+$ docker run be80a927e485
+
+eksctl create cluster --name eksctl-demo
+kubectl get nodes
+eksctl delete cluster eksctl-demo
+
+netstat -aon | findstr 5432
+tasklist /fi "pid eq 10732"
+192.168.29.67
+pip install pyngrok
+
+docker run -it -d -p 8080:8080 test
+docker run -it -d -p 80:8080 test
+$ docker run -d -p 80:8080 --env-file ./env_file.txt jwt-api-test
+bf6adcdd79f63019ceb68a130005e490da5e1542f9ec1b5cf4476a4c2430510a
+
+
+$ curl http://192.168.99.100:8080/
+
+
+
+$ docker inspect 6b2e8fc339b2
+
+user@user-PC MINGW64 ~
+$ export TOKEN=`curl -d '{"email":"rengaprasad.r@gmail.com","password":"1234"}' -H "Content-Type: application/json" -X POST localhost:8080/auth  | jq -r '.token'`
+$ export TOKEN=`curl -d '{"email":"rengaprasad.r@gmail.com","password":"1234"}' -H "Content-Type: application/json" -X POST http://192.168.99.100:80/auth  | jq -r '.token'`
+
+export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST localhost:80/auth  | jq -r '.token'
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   244  100   191  100    53    931    258 --:--:-- --:--:-- --:--:--  1184
+
+user@user-PC MINGW64 ~
+$ echo $TOKEN
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTAyNDI3NDksIm5iZiI6MTU4OTAzMzE0OSwiZW1haWwiOiJyZW5nYXByYXNhZC5yQGdtYWlsLmNvbSJ9.qFYRbQnp4Zn5--y7f2Udqfi8DVFHZtPCJfRUDXAvlMU
+
+user@user-PC MINGW64 ~
+$ curl --request GET 'http://127.0.0.1:8080/contents' -H "Authorization: Bearer ${TOKEN}" | jq .
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    85  100    85    0     0   5312      0 --:--:-- --:--:-- --:--:--  5666
+{
+  "email": "rengaprasad.r@gmail.com",
+  "exp": 1590242749,
+  "nbf": 1589033149
+}
+
+
+user@user-PC MINGW64 ~
+$ curl http://192.168.99.100:80/
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    10  100    10    0     0    357      0 --:--:-- --:--:-- --:--:--   370"Healthy"
+
+
+user@user-PC MINGW64 ~
+$ curl -d '{"email":"rengaprasad.r@gmail.com","password":"1234"}' -H "Content-Type: application/json" -X POST http://192.168.99.100:80/auth
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   239  100   186  100    53  26571   7571 --:--:-- --:--:-- --:--:-- 34142{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTAyODU0NjAsIm5iZiI6MTU4OTA3NTg2MCwiZW1haWwiOiJyZW5nYXByYXNhZC5yQGdtYWlsLmNvbSJ9.Xpc5ynRQrQ1dh3AaXQ1WNyvArJlYE0TJe8umjKvgb74"}
+
+
+user@user-PC MINGW64 ~
+$ export TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTAyODU0NjAsIm5iZiI6MTU4OTA3NTg2MCwiZW1haWwiOiJyZW5nYXByYXNhZC5yQGdtYWlsLmNvbSJ9.Xpc5ynRQrQ1dh3AaXQ1WNyvArJlYE0TJe8umjKvgb74
+
+user@user-PC MINGW64 ~
+$ export TOKEN=`curl -d '{"email":"rengaprasad.r@gmail.com","password":"1234"}' -H "Content-Type: application/json" -X POST http://192.168.99.100:80/auth  | jq -r '.token'`
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   239  100   186  100    53    577    164 --:--:-- --:--:-- --:--:--   768
+
+user@user-PC MINGW64 ~
+$ echo $token
+
+
+user@user-PC MINGW64 ~
+$ echo $TOKEN
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTAyODkyNjEsIm5iZiI6MTU4OTA3OTY2MSwiZW1haWwiOiJyZW5nYXByYXNhZC5yQGdtYWlsLmNvbSJ9.AhaDHPutuFOTx2XVhbOUoXluoJT-3cvYyCkyaGiisEA
+$ curl --request GET 'http://192.168.99.100:80/contents' -H "Authorization: Bearer ${TOKEN}" | jq .
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    70  100    70    0     0  17500      0 --:--:-- --:--:-- --:--:-- 17500
+{
+  "email": "rengaprasad.r@gmail.com",
+  "exp": 1590289261,
+  "nbf": 1589079661
+}
+
+
+
+user@user-PC MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+bf6adcdd79f6        jwt-api-test        "gunicorn -b :8080 m…"   2 hours ago         Up 2 hours          0.0.0.0:80->8080/tcp   trusting_lalande
+
+user@user-PC MINGW64 ~
+$ docker stop bf6adcdd79f6
+bf6adcdd79f6
+
+
+
+
+1750f27d662867b6a42329496384efcc556adf78
+
+
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ TRUST="{ \"Version\": \"2012-10-17\", \"Statement\": [ { \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"arn:aws:iam::${ACCOUNT_ID}:root\" }, \"Action\": \"sts:AssumeRole\" } ] }"
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam create-role --role-name UdacityFlaskDeployCBKubectlRole --assume-role-policy-document "$TRUST" --output text --query 'Role.Arn'
+arn:aws:iam::662475553340:role/UdacityFlaskDeployCBKubectlRole
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ echo '{ "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": [ "eks:Describe*", "ssm:GetParameters" ], "Resource": "*" } ] }' > /tmp/iam-role-policy
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:///tmp/iam-role-policy
+
+Error parsing parameter '--policy-document': Unable to load paramfile file:///tmp/iam-role-policy: [Errno 2] No such file or directory: '/tmp/iam-role-policy'
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:./tmp/iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ ls
+__pycache__/  buildspec.yml  ci-cd-codepipeline.cfn.yml  Dockerfile  env_file.txt  env_file1.py  examples/  main.py  README.md  requirements.txt  simple_jwt_api.yml  test_main.py
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ cd tmp
+bash: cd: tmp: No such file or directory
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ kubectl get -n kube-system configmap/aws-auth -o yaml > /tmp/aws-auth-patch.yml
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ kubectl patch configmap/aws-auth -n kube-system --patch "$(cat /tmp/aws-auth-patch.yml)"
+configmap/aws-auth patched (no change)
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:./tmp/iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:./temp/iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:./temp1/iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:C:\Users\user\AppData\Local\Temp
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:C:\Users\user\AppData\Local\Temp\iam-role-policy
+
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:\\C:\Users\user\AppData\Local\Temp\iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:///tmp/iam-role-policy
+
+Error parsing parameter '--policy-document': Unable to load paramfile file:///tmp/iam-role-policy: [Errno 2] No such file or directory: '/tmp/iam-role-policy'
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file:./tmp/iam-role-policy
+
+An error occurred (MalformedPolicyDocument) when calling the PutRolePolicy operation: Syntax errors in policy.
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-4/Deploy
+$ aws ssm put-parameter --name JWT_SECRET --value "YourJWTSecret" --type SecureString
+{
+    "Version": 1,
+    "Tier": "Standard"
+}
+
+$ aws iam put-role-policy --role-name UdacityFlaskDeployCBKubectlRole --policy-name eks-describe --policy-document file://./tmp/iam-role-policy
+
+$ kubectl get services simple-jwt-api -o wide
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE    SELECTOR
+simple-jwt-api   LoadBalancer   10.100.105.87   ac49987e755814d8098cd9d482479d1c-1712906780.us-west-2.elb.amazonaws.com   80:31216/TCP   103s   app=simple-jwt-api
+
+export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST ac49987e755814d8098cd9d482479d1c-1712906780.us-west-2.elb.amazonaws.com/auth  | jq -r '.token'`
+
+$ curl --request GET 'ac49987e755814d8098cd9d482479d1c-1712906780.us-west-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq .
+
+662475553340
+
+
+
+user@user-PC MINGW64 /
+$ kubectl get nodes
+NAME                                           STATUS   ROLES    AGE   VERSION
+ip-192-168-33-60.us-west-2.compute.internal    Ready    <none>   20h   v1.15.11-eks-af3caf
+ip-192-168-86-214.us-west-2.compute.internal   Ready    <none>   20h   v1.15.11-eks-af3caf
+
+user@user-PC MINGW64 /
+$ kubectl get services simple-jwt-api -o wide
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE   SELECTOR
+simple-jwt-api   LoadBalancer   10.100.105.87   ac49987e755814d8098cd9d482479d1c-1712906780.us-west-2.elb.amazonaws.com   80:31216/TCP   15h   app=simple-jwt-api
+
+user@user-PC MINGW64 /
+$ ^C
+
+user@user-PC MINGW64 /
+$ eksctl delete cluster simple-jwt-api
+[?]  eksctl version 0.18.0
+[?]  using region us-west-2
+[?]  deleting EKS cluster "simple-jwt-api"
+[?]  deleted 0 Fargate profile(s)
+[?]  kubeconfig has been updated
+[?]  cleaning up LoadBalancer services
+[?]  2 sequential tasks: { delete nodegroup "ng-6123a446", delete cluster control plane "simple-jwt-api" [async] }
+[?]  will delete stack "eksctl-simple-jwt-api-nodegroup-ng-6123a446"
+[?]  waiting for stack "eksctl-simple-jwt-api-nodegroup-ng-6123a446" to get deleted
+[?]  will delete stack "eksctl-simple-jwt-api-cluster"
+[?]  all cluster resources were deleted
+
+user@user-PC MINGW64 /
+$ kubectl get services simple-jwt-api -o wide
+error: no configuration has been provided, try setting KUBERNETES_MASTER environment variable
+
+user@user-PC MINGW64 /
+$ kubectl get nodes
+error: no configuration has been provided, try setting KUBERNETES_MASTER environment variable
+
+user@user-PC MINGW64 /
+$
+
+
+ser@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5
+$ python -m venv heroku_sample
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5
+$ cd heroku_sample/Scripts/activate
+bash: cd: heroku_sample/Scripts/activate: Not a directory
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5
+$ heroku_sample/Scripts/activate
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5
+$
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5
+$ cd heroku_sample/Scripts
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/Scripts
+$ . activate
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/Scripts
+$ pip freeze > requirements.txt
+(heroku_sample)
+
+
+Desktop\Full stack developer\Project-5\heroku_sample\Scripts
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ export EXCITED=true
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/May/2020 13:57:23] "GET / HTTP/1.1" 200 -
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ heroku create sample_heroku
+Creating sample_heroku... !
+ !    Name must start with a letter, end with a letter or digit and can only
+ !    contain lowercase letters, digits, and dashes.
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ heroku create sampleheroku
+Creating sampleheroku... !
+ !    Name sampleheroku is already taken
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ heroku create sampleheroku1
+Creating sampleheroku1... !
+ !    Name sampleheroku1 is already taken
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ heroku create sampleheroku2004
+Creating sampleheroku2004... done
+https://sampleheroku2004.herokuapp.com/ | https://git.heroku.com/sampleheroku2004.git
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter
+$ git init
+Initialized empty Git repository in C:/Users/user/Desktop/Full stack developer/Project-5/heroku_sample/starter/.git/
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ git remote add heroku https://git.heroku.com/sampleheroku2004.git
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ git add .
+warning: LF will be replaced by CRLF in Procfile.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in app.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in migrations/alembic.ini.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in migrations/env.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in migrations/script.py.mako.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in models.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in setup.sh.
+The file will have its original line endings in your working directory
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ git commit -m "My first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ heroku addons:create heroku-postgresql:hobby-dev --app sampleheroku2004
+Creating heroku-postgresql:hobby-dev on sampleheroku2004... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-curly-99833 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ heroku config --app sampleheroku2004
+=== sampleheroku2004 Config Vars
+DATABASE_URL: postgres://zsqebevukrygoh:9f375287fee04c7de792441b9d0c25f31dd2c123b0c5dc99bbb5dede501af862@ec2-52-87-58-157.compute-1.amazonaws.com:5432/d2ear41oug9029
+(heroku_sample)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$
+
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/heroku_sample/starter (master)
+$ heroku pg:psql
+--> Connecting to postgresql-curly-99833
+select * from "People";
+ id | name | catchphrase
+----+------+-------------
+(0 rows)
+
+
+heroku_sample=# \d "people"
+Did not find any relation named ""people"".
+heroku_sample=# \d "People"
+                                     Table "public.People"
+   Column    |       Type        | Collation | Nullable |               Default
+-------------+-------------------+-----------+----------+--------------------------------------
+ id          | integer           |           | not null | nextval('"People_id_seq"'::regclass)
+ name        | character varying |           |          |
+ catchphrase | character varying |           |          |
+Indexes:
+    "People_pkey" PRIMARY KEY, btree (id)
+
+
+heroku_sample=# select * from "people";
+ERROR:  relation "people" does not exist
+LINE 1: select * from "people";
+                      ^
+heroku_sample=# select * from "People";
+ id | name | catchphrase
+
+
+
+https://fsndreng.auth0.com/authorize?audience=movie&response_type=token&client_id=Ow2vreMBZ7zKSc0AWm35pBRO7xwoPFDJ&redirect_uri=https://localhost:8080/
+
+Source the setup file rather than executing '$ ./setup.sh'
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project
+$ . setup.sh
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project
+$ echo "$API_AUDIENCE"
+movie
+
+
+ERROR: Command errored out with exit status 1: 'c:\users\user\desktop\full stack developer\project-5\renga_capstone_project\env\scripts\python.exe' -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-90qwaxn0\\pycryptodome\\setup.py'"'"'; __file__='"'"'C:\\Users\\user\\AppData\\Local\\Temp\\pip-install-90qwaxn0\\pycryptodome\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record 'C:\Users\user\AppData\Local\Temp\pip-record-gxp26oyw\install-record.txt' --single-version-externally-managed --compile --install-headers 'c:\users\user\desktop\full stack developer\project-5\renga_capstone_project\env\include\site\python3.7\pycryptodome' Check the logs for full command output.
+WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+
+prodcuer
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJtb3ZpZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU5MDg0MDMzMSwiZXhwIjoxNTkwOTI2NzMxLCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJhZGQ6YWN0b3JzIiwiYWRkOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwibW9kaWZ5OmFjdG9ycyIsIm1vZGlmeTptb3ZpZXMiLCJ2aWV3OmFjdG9ycyIsInZpZXc6bW92aWVzIl19.pqcefCdO7jqPwuwCMW36TRdisQMLLMlOOHagOVab0mQHk-XYDW0tGzYGThH0f2MKEc4ZCOqzMGHU7D9wlLSbhWdenZYW7EZZ58I22vGd1VGIdhoAAhJk98vJmUIgYOKKUG-NEwG9mZIY7uhUdaXlLro4nF07_FmDZxzTrf9NXKe7dmAQYpQb1sWEcXOj6PBe2IxIomAAeHPUfmDMZjEq-mmB92Nt7iqkJWVu0sWS3VN4lFIR6WJjEIv_8qxhXmfbpVtLt58Q3nV3TiuXfs1TBCNc-UKQQSxnWEsUerxi4uKCxFvota9--c-0rkXiZvJYYUwa3pIDxvOZpjcYmNpQDw
+
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNDc3MTE1OTM5MDg5OTQ3MzIxOSIsImF1ZCI6WyJtb3ZpZSIsImh0dHBzOi8vZnNuZHJlbmcuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU5MDkwNTIwNiwiZXhwIjoxNTkwOTkxNjA2LCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJhZGQ6YWN0b3JzIiwiYWRkOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwibW9kaWZ5OmFjdG9ycyIsIm1vZGlmeTptb3ZpZXMiLCJ2aWV3OmFjdG9ycyIsInZpZXc6bW92aWVzIl19.Mveob16-WuyjDPMB8Be9lYzzrl0Nmbr26eV5n-xtBLzHBFyEag2f6Ex9-nQ9gnr1XB9bK8qvKebkQOR3O_Nmfn0aKSs08dR7GC2px5aazq3yaU1kPeARpZM-cHCKfecGKhm8jsjw4RamaZhHRi52Aub70VBflyr9AlCtsP1-39wx3Q13NwR2yVAlSmOZr_rWtxHVyBIrHsIp54yQKP-pTD1-pUxS6ZRqIxjhwrwqw5H4gb_w24s2HOFSma-JEpWRJ0nWNRrbCWIQSbtdv2sbx7ZiwMg1g_Yi6sjgwI2PiZQd2Nn6AiZZfkGErwDyRhgKOse8UWjxJh0f9olh4vTfvg
+
+
+director
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWQyNGQwYTM3NDJlZjBjODdmN2IxMjkiLCJhdWQiOiJtb3ZpZSIsImlhdCI6MTU5MDg0MTEyNywiZXhwIjoxNTkwOTI3NTI3LCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiYWRkOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJtb2RpZnk6YWN0b3JzIiwibW9kaWZ5Om1vdmllcyIsInZpZXc6YWN0b3JzIiwidmlldzptb3ZpZXMiXX0.mZuurVx_kL_02DDjT2fv-Oxj8CImsr_oC_AxpdL8FkjSMfMlcys6rnDqZ36t27nYfrRV74NHwWYKmQJRyaGEHXODBjyrwJF2EeYHE63suo_JhanaieC6n6zJ3Cflz5g0K9__LYyKTjkIpNplEwkvlrzuFiY6nBJ8ck_NwTwLtmyVy3t5vTx9GyW_xjUj0tik1oedPVyRzelyrsaVKP3FLg_YH7RJTca2EKqLzXWTtvmOMo3rBKGi5rLx6uIEG-yWereRmerKF1ucb6RDt6r5sn0AOVLAjKWZqOkSJ9KQ1ttto1MvjYg_WmEkopPDVjWFSq2gooNRO7Kf_xuXUA_XYg
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWQyNGQwYTM3NDJlZjBjODdmN2IxMjkiLCJhdWQiOiJtb3ZpZSIsImlhdCI6MTU5MDkwNDc2NCwiZXhwIjoxNTkwOTkxMTY0LCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiYWRkOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJtb2RpZnk6YWN0b3JzIiwibW9kaWZ5Om1vdmllcyIsInZpZXc6YWN0b3JzIiwidmlldzptb3ZpZXMiXX0.P4EJ_oGSMH3daRN07pvXUd_Hu1bLu5KxUUbKhSU6EFdRa6i5yFiyWkSNmSXSaLcpKRT_-5glfIa6jSIZE-wdefSjsbjyzZKl5KRgY6Xewjt-LhwdflLDZdbvr_ZjO9_dlDOXE9e8jSJ8y7t5XN1g70iWhuSivOwJwFH4N5A3GxEXeqHpqyjAjCN8rj68kGhPNJ_6iFhVIruS4keB3NzW6k9Nnky7QWX41nPoYmOssoXD7lrk50QX1sHuaUeu9Jy66358CN2jiIud9hOCL5MDUv_k97x-XSCtZw3XcR6MxLzHv8KWieBX5xedtmRBl_JId2xGTszpvFtXvz9-o-A-YA
+
+Assistant
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWQyNGYwOWJlYjY4NDBjOTM5NGMzZmIiLCJhdWQiOiJtb3ZpZSIsImlhdCI6MTU5MDg0MTMxMCwiZXhwIjoxNTkwOTI3NzEwLCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsidmlldzphY3RvcnMiLCJ2aWV3Om1vdmllcyJdfQ.HqzDCMtarVkHF2QN5GCVML14_5sqyo3KeUAUFhdUCJE6M6Cq_rdALs2vdnRyd2FEp4JBKyRaIXdoyJl4nduSUUsBp0I6Ga3muuaZJWaGPgCsVjuFpOCBLtRVLqHdmRd_45OmvFr3wwCEt1nXP_GZpEtoedqnLlt-T2iSiqOkkoh75tmXrCUABrDpNnTDzlebFMzGJMOAicWSpsS12dXGOaNMjvaNPuctpUSpzdY1bQvxHjxsEPsVG3mN68Tp5kIdQR7AVoM9RZEpbVa5p9k0f-ctn_AFLpgr6PSxnaTytHW0QfPMnNM97Yr3wcSQf2o8CVDlwiGkqgYIGiD69-aFZQ
+
+
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlI1SVprT3BHZEVSTDItLWtReFNFRSJ9.eyJpc3MiOiJodHRwczovL2ZzbmRyZW5nLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWQyNGYwOWJlYjY4NDBjOTM5NGMzZmIiLCJhdWQiOiJtb3ZpZSIsImlhdCI6MTU5MDkwNDYxMiwiZXhwIjoxNTkwOTkxMDEyLCJhenAiOiJPdzJ2cmVNQlo3ektTYzBBV20zNXBCUk83eHdvUEZESiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsidmlldzphY3RvcnMiLCJ2aWV3Om1vdmllcyJdfQ.YLIWZHRFrQwWStilKMDwoSp1l7CGg8eUX_rOGfhHbia1Op9CO7rpnHjHJZq7PWOLS6E4Wxd_XJdrGAN9l9wNfwUIw3x5sEdnYLXmCgyFLPtJF8WZwYOXFTWn42m8AE64tVbxnVGLuz2HxmiCEqz-KMvASy-vywzvfSBKazJQ7MpHojsxh3vxkoiFydVfCCyusM0P68wd5b8-NfT8uVzi07zNVlhcE-Lu6nRUch36-lzdSYcX_8qJGuyTKmtucS81Q1cKkcBpON3qQGh8cGhHldyowSCFXRvH4CaEJXpxlGxV5UROGIqYriN_pdhdSaQzuwr0030WdY-fYHnyr-T0fA
+
+
+$ heroku create renga-cast-agency
+Creating renga-cast-agency... done
+https://renga-cast-agency.herokuapp.com/ | https://git.heroku.com/renga-cast-agency.git
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ pip freeze > requirements.txt
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git add .
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   requirements.txt
+        deleted:    requirements1.txt
+        deleted:    requirements2.txt
+
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git add .
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+        modified:   requirements.txt
+        deleted:    requirements1.txt
+        deleted:    requirements2.txt
+
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git commit -m "My 2nd commit"
+[master 27c93a4] My 2nd commit
+ 4 files changed, 11 insertions(+), 73 deletions(-)
+ delete mode 100644 requirements1.txt
+ delete mode 100644 requirements2.txt
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git remote add heroku https://git.heroku.com/renga-cast-agency.git
+fatal: remote heroku already exists.
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git remote add heroku https://git.heroku.com/renga-cast-agency.git
+fatal: remote heroku already exists.
+(env)
+usgit remote add heroku https://git.heroku.com/renga-cast-agency.git^Cct (master)
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+v --app name_of_your_application^Ceroku addons:create heroku-postgresql:hobby-dev
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+n^Ceroku addons:create heroku-postgresql:hobby-dev --app name_of_your_application
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ heroku addons:create heroku-postgresql:hobby-dev --app renga-cast-agency
+Creating heroku-postgresql:hobby-dev on renga-cast-agency... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-objective-29744 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ git push heroku master
+Enumerating objects: 35, done.
+
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ heroku pg:psql
+--> Connecting to postgresql-objective-29744
+\dt
+Did not find any relations.
+\q
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ heroku config --app renga-cast-agency
+=== renga-cast-agency Config Vars
+ALGORITHMS:   RS256
+API_AUDIENCE: movie
+AUTH0_DOMAIN: fsndreng.auth0.com
+DATABASE_URL: postgres://ehgdyalowetjuo:bae6b852b797d08a1b44d45a3b3b6b9f0408ee2ecf0fcd9671d29afbcfc39cc2@ec2-54-175-117-212.compute-1.amazonaws.com:5432/d9sq7fvotgsi48
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ heroku run python manage.py db upgrade --app renga-cast-agency
+Running python manage.py db upgrade on renga-cast-agency... starting, run.5661 (Free)
+Running python manage.py db upgrade on renga-cast-agency... connecting, run.5661 (Free)Running python manage.py db upgrade on renga-cast-agency... up, run.5661 (Free)
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> e94916c6c56d, empty message
+(env)
+user@user-PC MINGW64 ~/Desktop/Full stack developer/Project-5/Renga_capstone_project (master)
+$ heroku pg:psql --app <appname>
+--> Connecting to postgresql-objective-29744
+\dt
+                 List of relations
+ Schema |      Name       | Type  |     Owner
+--------+-----------------+-------+----------------
+ public | actors          | table | ehgdyalowetjuo
+ public | alembic_version | table | ehgdyalowetjuo
+ public | cast_detail     | table | ehgdyalowetjuo
+ public | movies          | table | ehgdyalowetjuo
+(4 rows)
+
+select * from actors;
+ id | name | gender | age
+----+------+--------+-----
+(0 rows)
+
+
+https://renga-cast-agency.herokuapp.com
+
+Tokens
+
+
+
+
